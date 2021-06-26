@@ -1,0 +1,96 @@
+# GO data graphs
+
+import matplotlib.pyplot as plt
+
+terms = ['Toxin activity GO:0090729',
+'Nutrient reservoir activity GO:0045735',
+'Hijacked molecular function GO:0104005',
+'Molecular carrier activity GO:0140104',
+'Cargo receptor activity GO:0038024',
+'Translation regulator activity GO:0045182',
+'Antioxidant activity GO:0016209',
+'Molecular transducer activity GO:0060089',
+'Protein tag GO:0031386',
+'Transcription regulator activity GO:0140110',
+'Molecular function regulator GO:0098772',
+'Structural molecule activity GO:0005198',
+'Transporter activity GO:0005215',
+'Catalytic activity GO:0003824',
+'Binding GO:0005488'
+]
+
+genes = [4,
+12,
+19,
+147,
+308,
+361,
+400,
+1905,
+2135,
+2507,
+4134,
+4222,
+4569,
+34433,
+51930,
+]
+
+
+
+
+plt.barh(terms,genes, color="#0f2231")
+
+plt.ylabel('GO terms')
+plt.xlabel('Number of genes (log)')
+plt.xscale('symlog')
+
+plt.show()
+
+from matplotlib import pyplot as plt 
+import numpy as np 
+ 
+import os
+os.chdir('Documents')
+
+
+groups = ['Hemostasis impairing toxins',
+'Metalloprotease',
+'Phospholipases',
+'Nucleotidases',
+'Lipases',
+'Carboxipeptidases',
+'Phosphodiesterases',
+'Pore-forming toxins',
+'Complement system impairing toxins',
+'Aminopeptidases',
+'Glicosidases',
+'Acetylcholinesterases',
+'Others']
+
+number = [57,
+50,
+13,
+13,
+10,
+8,
+6,
+6,
+5,
+4,
+3,
+1,
+14
+]
+
+
+fig = plt.figure(figsize =(15, 15)) 
+colors = ['#0f2231', '#112637', '#132a3d', '#152e43', '#17334a', '#193750', '#1b3b56',
+          '#1d3f5c', '#1f4462', '#214868', '#234c6f', '#255075', '#27557b']
+
+
+
+plt.pie(number, labels = groups, autopct='%1.1f%%',pctdistance=0.92, textprops={'fontsize': 18}, colors=colors) 
+
+plt.show()
+
