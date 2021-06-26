@@ -1,0 +1,5 @@
+# Filtering
+
+awk -v n=100 '/^>/{ if(l<n) print b; b=$0;l=0;next }  
+            {l+=length;b=b ORS $0}END{if(l<n) print b }' file1 > file2
+            
