@@ -1,0 +1,13 @@
+# Seqinr
+
+
+dna <- read.fasta(infile)
+
+length(dna)
+
+aa1 <- getTrans(dna, sens="F", frame=0)
+aa2 <- getTrans(dna, sens="F", frame=1)
+aa3 <- getTrans(dna, sens="F", frame=2)
+aa4 <- getTrans(dna, sens="R", frame=0)
+aa5 <- getTrans(dna, sens="R", frame=1)
+aa6 <- getTrans(dna, sens="R", frame=2)
